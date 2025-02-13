@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class DefaultHeader extends StatelessWidget {
-  const DefaultHeader({super.key});
+class DefaultFooter extends StatelessWidget {
+  const DefaultFooter({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -9,7 +9,7 @@ class DefaultHeader extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         Icon(Icons.menu),
-        Text('Header'),
+        Text('Footer'),
         Icon(Icons.menu),
       ],
     );
