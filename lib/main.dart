@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:foreat_mobile/container/default_footer.dart';
 import 'package:foreat_mobile/container/default_header.dart';
 
 void main() {
@@ -60,11 +61,7 @@ class _MyHomePageState extends State<MyHomePage> {
           ),
         ),
       ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: 'Increment',
-        child: const Icon(Icons.add),
-      ),
+      floatingActionButton: const DefaultFooter(),
     );
   }
 }
