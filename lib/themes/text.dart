@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class AppTextStyle {
+class AppTextSize {
   static const TextStyle h1 = TextStyle(
     fontSize: 44,
     fontWeight: FontWeight.w500,
