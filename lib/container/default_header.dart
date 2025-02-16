@@ -10,16 +10,25 @@ class DefaultHeader extends StatelessWidget {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
-        Image.asset('assets/images/header/header_back_black.png', width: 40, height: 40),
-        const DefaultText(text: 'Header', size: AppTextSize.h4),
-        Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          crossAxisAlignment: CrossAxisAlignment.end,
-          spacing: 8,
-          children: [
-            Image.asset('assets/images/header/header_basket_black.png', width: 40, height: 40),
-            Image.asset('assets/images/header/header_basket_black.png', width: 40, height: 40),
-          ],
+        Expanded(
+            child: Row(
+          mainAxisAlignment: MainAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [Image.asset('assets/images/header/header_back_black.png', width: 40, height: 40)],
+        )),
+        const Expanded(
+          child: DefaultText(text: 'HeaderHeaderHeaderHeader', size: AppTextSize.h4, textAlign: TextAlign.center),
+        ),
+        Expanded(
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.end,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            spacing: 8,
+            children: [
+              Image.asset('assets/images/header/header_basket_black.png', width: 40, height: 40),
+              Image.asset('assets/images/header/header_basket_black.png', width: 40, height: 40),
+            ],
+          ),
         ),
       ],
     );
