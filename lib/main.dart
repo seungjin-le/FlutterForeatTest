@@ -1,9 +1,21 @@
 import 'package:flutter/material.dart';
 import 'package:foreat_mobile/container/default_footer.dart';
 import 'package:foreat_mobile/container/default_header.dart';
+import 'package:foreat_mobile/routes/routes.dart';
+import 'package:get/get.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(
+    GetMaterialApp(
+      title: 'Application',
+      initialRoute: Routes.HOME,
+      getPages: AppPages.routes,
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+        visualDensity: VisualDensity.adaptivePlatformDensity,
+      ),
+    ),
+  );
 }
 
 class MyApp extends StatelessWidget {
