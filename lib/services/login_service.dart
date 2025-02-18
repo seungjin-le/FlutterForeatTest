@@ -25,13 +25,13 @@ class LoginService extends GetxService {
       }
       return false;
     } catch (e) {
-      print('로그인 에러: $e');
+      print('로그인 에러 : $e');
       return false;
     }
   }
 
+  // GetStorage에서 토큰 삭제
   Future<void> logout() async {
-    // GetStorage에서 토큰 삭제
     storage.remove(_tokenKey);
     _dio.options.headers.remove('Authorization');
   }
