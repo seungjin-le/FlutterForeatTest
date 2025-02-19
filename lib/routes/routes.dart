@@ -1,3 +1,4 @@
+import 'package:foreat_mobile/bindings/login_binding.dart';
 import 'package:foreat_mobile/controllers/home_controller.dart';
 import 'package:foreat_mobile/screens/home.dart';
 import 'package:foreat_mobile/screens/login.dart';

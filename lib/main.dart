@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:foreat_mobile/container/default_footer.dart';
 import 'package:foreat_mobile/container/default_header.dart';
 import 'package:foreat_mobile/routes/routes.dart';
 import 'package:get/get.dart';
 
-void main() {
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized(); // Flutter 바인딩 초기화
+  await GetStorage.init(); // GetStorage 초기화
+
   runApp(
     GetMaterialApp(
       title: 'Application',
