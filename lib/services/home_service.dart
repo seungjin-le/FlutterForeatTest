@@ -2,7 +2,7 @@ import 'package:dio/dio.dart';
 import 'package:get/get.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-class LoginService extends GetxService {
+class HomeService extends GetxService {
   final Dio _dio = Dio();
   final SharedPreferences _prefs = Get.find<SharedPreferences>();
 
