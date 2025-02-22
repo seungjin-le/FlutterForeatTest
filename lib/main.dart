@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:foreat_mobile/container/default_header.dart';
 import 'package:foreat_mobile/routes/routes.dart';
+import 'package:get_storage/get_storage.dart';
 import 'package:get/get.dart';
 
 Future<void> main() async {
