@@ -30,8 +30,14 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-
-
+  # 상태관리
+  get: ^4.6.5
+  # 네트워크 통신
+  dio: ^5.0.0
+  # 로컬 저장소
+  get_storage: ^2.1.1
+  # 이미지 캐싱
+  cached_network_image: ^3.0.0
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.8
@@ -39,16 +45,6 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  # 상태관리
-  get: ^4.6.5
-  # 네트워크 통신
-  dio: ^5.0.0
-  
-  # 로컬 저장소
-  shared_preferences: ^2.0.0
-  get_storage: ^2.1.1
-  # 이미지 캐싱
-  cached_network_image: ^3.0.0
   # The "flutter_lints" package below contains a set of recommended lints to
   # encourage good coding practices. The lint set provided by the package is
   # activated in the `analysis_options.yaml` file located at the root of your
@@ -65,7 +61,7 @@ flutter:
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in
   # the material Icons class.
-  uses-material-design: true
+  uses-material-design: true  
 
   # To add assets to your application, add an assets section, like this:
   assets:
