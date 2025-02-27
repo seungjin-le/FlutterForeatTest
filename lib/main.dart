@@ -59,7 +59,7 @@ class _MyHomePageState extends State<MyHomePage> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Text(
-                'You have pushed the button this many times:',
+                '',
               ),
               Text(
                 '1234',

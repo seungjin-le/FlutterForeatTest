@@ -7,12 +7,12 @@ import 'package:get/get.dart';
 class AppPages {
   static final routes = [
     GetPage(
-      name: Routes.HOME,
+      name: Routes.home,
       page: () => const HomeScreen(),
       binding: HomeBinding(),
     ),
     GetPage(
-      name: Routes.LOGIN,
+      name: Routes.login,
       page: () => const LoginScreen(),
       binding: LoginBinding(),
     ),
@@ -20,8 +20,8 @@ class AppPages {
 }
 
 abstract class Routes {
-  static const HOME = '/home';
-  static const LOGIN = '/login';
+  static const home = '/home';
+  static const login = '/login';
 }
 
 class HomeBinding extends Bindings {
