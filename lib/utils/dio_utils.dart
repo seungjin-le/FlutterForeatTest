@@ -1,6 +1,35 @@
 import 'package:dio/dio.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
+import 'package:shared_preferences/shared_preferences.dart';
+
+class DioInterceptor extends Interceptor {
+  @override
+  void onRequest(RequestOptions options, RequestInterceptorHandler handler) async {
+    // 쿠키를 로컬 스토리지에서 가져옴
+    final prefs = await SharedPreferences.getInstance();
+    final cookie = prefs.getString('cookie');
+
+    if (cookie != null) {
+      // 쿠키가 존재하면 요청 헤더에 추가합니다.
+      options.headers['Cookie'] = cookie;
+    }
+
+    super.onRequest(options, handler);
+  }
+
+  @override
+  void onResponse(response, ResponseInterceptorHandler handler) {
+    // Add any custom logic for response interception
+    print('Response: ${response.statusCode} ${response.statusMessage}');
+    super.onResponse(response, handler);
+  }
+
+  @override
+  void onError(DioException err, ErrorInterceptorHandler handler) {
+    super.onError(err, handler);
+  }
+}
 
 class DioUtils {
   static Dio? _instance;
@@ -52,19 +81,12 @@ class DioUtils {
   static Interceptor _logInterceptor() {
     return InterceptorsWrapper(
       onRequest: (options, handler) {
-        print('🌐 REQUEST[${options.method}] => PATH: ${options.path}');
-        print('Headers: ${options.headers}');
-        print('Data: ${options.data}');
         return handler.next(options);
       },
       onResponse: (response, handler) {
-        print('✅ RESPONSE[${response.statusCode}] => PATH: ${response.requestOptions.path}');
-        print('Data: ${response.data}');
         return handler.next(response);
       },
       onError: (error, handler) {
-        print('⚠️ ERROR[${error.response?.statusCode}] => PATH: ${error.requestOptions.path}');
-        print('Message: ${error.message}');
         return handler.next(error);
       },
     );
