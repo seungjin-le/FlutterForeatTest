@@ -21,7 +21,7 @@ class DioInterceptor extends Interceptor {
   @override
   void onResponse(response, ResponseInterceptorHandler handler) {
     // Add any custom logic for response interception
-    print('Response: ${response.statusCode} ${response.statusMessage}');
+
     super.onResponse(response, handler);
   }
 
