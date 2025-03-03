@@ -1,5 +1,7 @@
 import 'package:dio/dio.dart';
 
+const _baseUrl = 'http://localhost:8080';
+
 class DioInterceptor extends Interceptor {
   @override
   void onRequest(RequestOptions options, RequestInterceptorHandler handler) {
