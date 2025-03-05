@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:foreat_mobile/components/default_text.dart';
+import 'package:foreat_mobile/components/text/default_text.dart';
 import 'package:foreat_mobile/themes/text.dart';
 
 class DefaultHeader extends StatelessWidget {
