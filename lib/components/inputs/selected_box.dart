@@ -8,7 +8,7 @@ class SelectedBox extends StatelessWidget {
   final bool obscureText;
   final List<String> items;
   final String value;
-  final Function(String) onChanged;
+  final ValueChanged<String?> onChanged;
 
   const SelectedBox({
     super.key,
