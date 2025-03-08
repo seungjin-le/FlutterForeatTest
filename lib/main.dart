@@ -10,7 +10,7 @@ Future<void> main() async {
 
   runApp(
     GetMaterialApp(
-      title: 'Application',
+      title: 'Foreat',
       initialRoute: Routes.home,
       getPages: AppPages.routes,
       theme: ThemeData(
