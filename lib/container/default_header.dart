@@ -23,9 +23,9 @@ class DefaultHeader extends StatelessWidget {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.end,
             crossAxisAlignment: CrossAxisAlignment.center,
-            spacing: 8,
             children: [
               Image.asset('assets/images/header/header_basket_black.png', width: 40, height: 40),
+              const SizedBox(width: 8),
               Image.asset('assets/images/header/header_basket_black.png', width: 40, height: 40),
             ],
           ),
