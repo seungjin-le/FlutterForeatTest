@@ -4,6 +4,9 @@ class DefaultBtn extends StatelessWidget {
   const DefaultBtn({super.key});
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return ElevatedButton(
+      child: const Text('Default Button'),
+      onPressed: () {},
+    );
   }
 }
