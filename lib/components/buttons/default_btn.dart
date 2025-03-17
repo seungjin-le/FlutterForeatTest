@@ -1,15 +1,21 @@
 import 'package:flutter/material.dart';
 
 class DefaultBtn extends StatelessWidget {
-  const DefaultBtn({super.key, required this.child, required this.onPressed});
+  const DefaultBtn({super.key, required this.text, required this.onPressed});
 
-  final Widget child;
+  final String text;
   final VoidCallback onPressed;
 
   @override
   Widget build(BuildContext context) {
     return ElevatedButton(
-      child: child,
+      style: ElevatedButton.styleFrom(
+        padding: const EdgeInsets.symmetric(vertical: 12, horizontal: 16),
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(8),
+        ),
+      ),
+      child: Text(text, style: const TextStyle(fontSize: 16)),
       onPressed: onPressed,
     );
   }
