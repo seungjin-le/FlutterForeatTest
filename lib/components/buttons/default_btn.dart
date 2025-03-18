@@ -15,8 +15,8 @@ class DefaultBtn extends StatelessWidget {
           borderRadius: BorderRadius.circular(8),
         ),
       ),
-      child: Text(text, style: const TextStyle(fontSize: 16)),
       onPressed: onPressed,
+      child: Text(text, style: const TextStyle(fontSize: 16)),
     );
   }
 }
